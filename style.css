@@ -1,0 +1,412 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #0f172a;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* ========================= */
+/* LOADER */
+/* ========================= */
+
+#loader {
+  position: fixed;
+  inset: 0;
+  background: #0f172a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#loader h2 {
+  font-size: 32px;
+  color: #38bdf8;
+}
+
+#loader p {
+  margin-top: 10px;
+  opacity: 0.7;
+}
+
+/* ========================= */
+/* APP CONTAINER */
+/* ========================= */
+
+.app {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* ========================= */
+/* HEADER */
+/* ========================= */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.header h1 {
+  font-size: 24px;
+  color: #38bdf8;
+}
+
+.header button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #1e293b;
+  color: #fff;
+}
+
+/* ========================= */
+/* SECTIONS */
+/* ========================= */
+
+.section {
+  display: none;
+  margin-top: 40px;
+}
+
+.section.active {
+  display: block;
+}
+
+/* ========================= */
+/* HOME */
+/* ========================= */
+
+#home {
+  text-align: center;
+}
+
+#home h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+#username {
+  padding: 12px;
+  width: 250px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  margin-bottom: 15px;
+}
+
+#startBtn {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 10px;
+  background: #38bdf8;
+  color: #000;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* ========================= */
+/* SUBJECTS & DIFFICULTY */
+/* ========================= */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.card {
+  background: #d4d7dd;
+  padding: 20px;
+  color: azure;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+  border: 1px solid transparent;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: #38bdf8;
+}
+
+/* ========================= */
+/* EXAM */
+/* ========================= */
+
+#exam {
+  text-align: center;
+}
+
+.exam-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+#question {
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.answers {
+  display: grid;
+  gap: 10px;
+}
+
+.answers button {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: #1e293b;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.answers button:hover {
+  background: #38bdf8;
+  color: #000;
+}
+
+.exam-actions {
+  margin-top: 20px;
+}
+
+#nextBtn {
+  padding: 10px 20px;
+  border: none;
+  background: #38bdf8;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* ========================= */
+/* RESULT */
+/* ========================= */
+
+#result {
+  text-align: center;
+}
+
+#result h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.result-box {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 15px;
+  display: inline-block;
+}
+
+/* ========================= */
+/* ANIMATIONS */
+/* ========================= */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section.active {
+  animation: fadeIn 0.5s ease;
+}
+
+/* ========================= */
+/* GLASS EFFECT HEADER */
+/* ========================= */
+
+.header {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 15px;
+  padding: 15px 20px;
+  position: sticky;
+  top: 10px;
+  z-index: 1000;
+}
+
+/* ========================= */
+/* GLASS CARDS */
+/* ========================= */
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.03);
+  background: rgba(56, 189, 248, 0.1);
+}
+
+/* ========================= */
+/* BUTTONS PRO */
+/* ========================= */
+
+button {
+  transition: 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* ========================= */
+/* EXAM UI PRO */
+/* ========================= */
+
+#question {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  animation: fadeIn 0.4s ease;
+}
+
+.answers button {
+  position: relative;
+  overflow: hidden;
+  font-size: 16px;
+}
+
+/* hover glow */
+.answers button:hover {
+  box-shadow: 0 0 15px #38bdf8;
+}
+
+/* ========================= */
+/* TIMER */
+/* ========================= */
+
+.exam-top {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 10px 15px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+
+/* ========================= */
+/* RESULT CARD PRO */
+/* ========================= */
+
+.result-box {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  animation: fadeIn 0.6s ease;
+}
+
+/* ========================= */
+/* INPUT PRO */
+/* ========================= */
+
+input {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 12px;
+  border-radius: 10px;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: #38bdf8;
+  box-shadow: 0 0 10px #38bdf8;
+}
+
+/* ========================= */
+/* BACKGROUND GLOW */
+/* ========================= */
+
+body::before {
+  content: "";
+  position: fixed;
+  width: 400px;
+  height: 400px;
+  background: #38bdf8;
+  filter: blur(150px);
+  top: -100px;
+  left: -100px;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  width: 400px;
+  height: 400px;
+  background: #a855f7;
+  filter: blur(150px);
+  bottom: -100px;
+  right: -100px;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+/* ========================= */
+/* MOBILE RESPONSIVE */
+/* ========================= */
+
+@media (max-width: 768px) {
+  .exam-top {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #question {
+    font-size: 20px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+#restartBtn{
+    padding: 10px 20px;
+  border: none;
+  background: #38bdf8;
+  border-radius: 10px;
+  cursor: pointer;
+
+}

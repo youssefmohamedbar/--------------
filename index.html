@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ExamSphere Pro</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- ================= LOADER ================= -->
+    <div id="loader">
+      <h2>ExamSphere Pro</h2>
+      <p>Loading...</p>
+    </div>
+
+    <!-- ================= APP ================= -->
+    <div class="app">
+      <!-- HEADER -->
+      <header class="header">
+        <h1>ExamSphere</h1>
+
+        <div class="actions">
+          <button id="themeToggle">🌙</button>
+        </div>
+      </header>
+
+      <!-- HOME -->
+      <section id="home" class="section active">
+        <h2>Welcome 👋</h2>
+
+        <input type="text" id="username" placeholder="Enter your name" />
+
+        <button id="startBtn">Start</button>
+      </section>
+
+      <!-- SUBJECTS -->
+      <section id="subjects" class="section">
+        <h2>Select Subject</h2>
+
+        <div class="grid">
+          <button class="card" data-subject="html">HTML</button>
+          <button class="card" data-subject="css">CSS</button>
+          <button class="card" data-subject="js">JavaScript</button>
+        </div>
+      </section>
+
+      <!-- DIFFICULTY -->
+      <section id="difficulty" class="section">
+        <h2>Select Difficulty</h2>
+
+        <div class="grid">
+          <button class="card" data-level="easy">Easy</button>
+          <button class="card" data-level="medium">Medium</button>
+          <button class="card" data-level="hard">Hard</button>
+        </div>
+      </section>
+
+      <!-- EXAM -->
+      <section id="exam" class="section">
+        <div class="exam-top">
+          <span id="qInfo">Question 1/10</span>
+          <span id="timer">00:00</span>
+        </div>
+
+        <h2 id="question">Question text</h2>
+
+        <div id="answers" class="answers"></div>
+
+        <div class="exam-actions">
+          <button id="nextBtn">Next</button>
+        </div>
+      </section>
+
+      <!-- RESULT -->
+      <section id="result" class="section">
+        <h2>Result 🎉</h2>
+        <p id="score"></p>
+
+        <button id="restartBtn">Restart</button>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
